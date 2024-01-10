@@ -1,20 +1,29 @@
 import { PackageType } from "../shared/types"
 import Package from "./Package"
 import Package1 from '../assets/Package1.jpg'
+import Package2 from '../assets/Package2.jpg'
+import Package3 from '../assets/Package3.jpg'
+import Package4 from '../assets/Package4.jpg'
 
 const packages: Array<PackageType> = [
     {
-        image: "Package1",
+        image: Package1,
         name: "Lorem ipsum",
         description: "One-stop Platform community for Agents and Operator in Thailand.",
-    },
-    {
-        image: "Package1",
+    }, {
+        image: Package2,
         name: "Lorem ipsum",
         description: "One-stop Platform community for Agents and Operator in Thailand.",
-    },
-    {
-        image: "Package1",
+    }, {
+        image: Package3,
+        name: "Lorem ipsum",
+        description: "One-stop Platform community for Agents and Operator in Thailand.",
+    }, {
+        image: Package4,
+        name: "Lorem ipsum",
+        description: "One-stop Platform community for Agents and Operator in Thailand.",
+    },{
+        image: Package4,
         name: "Lorem ipsum",
         description: "One-stop Platform community for Agents and Operator in Thailand.",
     },
@@ -32,13 +41,13 @@ export default function HomePage() {
             </div>
 
             <div className="flex justify-center items-center text-center mt-[42px]">
-                <p className="md:text-[26px] text-[22px] font-[700] font-Poppins">Lorem ipsum</p>
+                <p className="md:text-[26px] text-[22px] font-[700] font-Poppins md:mb-10 mb-">Lorem ipsum</p>
             </div>
 
-            <div className="md:flex items-center justify-between gap-8 mt-5">
-                {packages.map((package: PackageType) => (
+            <div className="grid lg:grid-cols-4 justify-center items-center text-center lg:mx-20 mx-7 gap-5">
+                {packages.map((package: PackageType, index) => (
                     <Package
-                        key={package.name}
+                        key={`${package.name}-${index}`}
                         image={package.image}
                         name={package.name}
                         description={package.description}
@@ -49,3 +58,4 @@ export default function HomePage() {
         </>
     )
 }
+

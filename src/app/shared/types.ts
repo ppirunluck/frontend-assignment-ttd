@@ -1,7 +1,5 @@
-import { JsxElement } from "typescript"
-
 export interface PackageType {
-    image: string
+    image: StaticImageData
     name: string
     description: string
 }

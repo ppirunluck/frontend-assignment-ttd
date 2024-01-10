@@ -18,11 +18,14 @@ module.exports = {
     },
     dropShadow:{
       '2xl': '0px 2px 12px rgba(0, 0, 0, 0.35)',
-      '3xl': '0px 4px 4px rgba(0, 0, 0, 0.25)'
+      '3xl': '0px 4px 4px rgba(0, 0, 0, 0.25)', 
     },
     colors: {
       'primary-button': '#2A4B6A',
-      'red': 'rgb(234 88 12)'
+      'cencel-button': '#021E42',
+      'submit-button': '#5FC198',
+      'red': 'rgb(234 88 12)',
+      'white': "#FFF", 
     },
     textColor: {
       white: "#FFF",  
