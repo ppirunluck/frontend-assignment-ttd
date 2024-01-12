@@ -7,6 +7,16 @@ interface dataState {
     setData: (body: object) => void
 }
 
-export const useDataState = create<dataState>(){
-
-}
+export const useDataStore = create<dataState>()(
+    persist(
+        (set) => ({
+            email: "",
+            Image: "",
+            setData: (newData) => set({...newData})
+        }),
+        {
+            name: "dataInfo",
+            storage: createJSONStorage(() => sessionStorage)
+        }
+    )
+)
