@@ -11,7 +11,7 @@ export const useDataStore = create<dataState>()(
     persist(
         (set) => ({
             email: "",
-            Image: "",
+            image: "",
             setData: (newData) => set({...newData})
         }),
         {

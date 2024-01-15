@@ -1,7 +1,7 @@
-'use client'
+"use client"
 
 import * as React from 'react';
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation'
 import { Mail, LockKeyhole, } from 'lucide-react';
 import { Box, Avatar, Paper, Stack } from '@mui/material';
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
@@ -12,7 +12,7 @@ import ImageDialog from '@/components/image_dialog';
 type Props = {}
 
 export default function Signin({ }: Props) {
-    // const router = useRouter()
+    const router = useRouter()
     const { setData } = useDataStore()
     const refInputFile = React.useRef<HTMLInputElement | null>(null)
 
@@ -67,7 +67,7 @@ export default function Signin({ }: Props) {
     return (
         <>
             <div className="flex justify-center items-center">
-                <div className="my-[30px] py-[30px] rounded-[20px] bg-white shadow drop-shadow-md box-border lg:w-8/12 w-12/12">
+                <div className="mt-[100px] mb-[30px] py-[30px] rounded-[20px] bg-white shadow drop-shadow-md box-border lg:w-8/12 w-12/12">
 
                     <div className="flex justify-center items-center">
                         <Box
@@ -162,12 +162,14 @@ export default function Signin({ }: Props) {
                                     <Mail size={18} />
                                 </div>
                                 <input
-                                    type="string"
-                                    name="email"
-                                    id="email"
                                     className="block rounded-md border-0 py-1.5 pl-12 text-gray-900 
                                 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 
                                 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 box-border w-full"
+                                    type="email"
+                                    name="email"
+                                    id="email"
+                                    value={values.email}
+                                    onChange={handleChangeValues}
                                     placeholder="Enter your Email"
                                 />
                             </div>
@@ -461,7 +463,11 @@ export default function Signin({ }: Props) {
                         <button className="rounded-full bg-cencel-button text-white font-semibold px-8 py-2 drop-shadow-3xl w-auto">
                             Cencel
                         </button>
-                        <button type='submit' className="rounded-full bg-submit-button text-white font-semibold px-8 py-2 drop-shadow-3xl w-auto">
+                        <button
+                            type='submit'
+                            className="rounded-full bg-submit-button text-white font-semibold px-8 py-2 drop-shadow-3xl w-auto"
+                            onClick={handleSubmit}
+                        >
                             Submit
                         </button>
                     </div>

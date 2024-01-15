@@ -1,29 +1,38 @@
-import { PackageType } from "../shared/types"
 import Package from "./Package"
-import Package1 from '../assets/Package1.jpg'
-import Package2 from '../assets/Package2.jpg'
-import Package3 from '../assets/Package3.jpg'
-import Package4 from '../assets/Package4.jpg'
+import Package1 from "@/assets/Package1.jpg"
+import Package2 from "@/assets/Package2.jpg"
+import Package3 from "@/assets/Package3.jpg"
+import Package4 from "@/assets/Package4.jpg"
+
+interface PackageType {
+    pic: string,
+    name: string,
+    description: string
+}
 
 const packages: Array<PackageType> = [
     {
-        image: Package1,
+        pic: Package1,
         name: "Lorem ipsum",
         description: "One-stop Platform community for Agents and Operator in Thailand.",
     }, {
-        image: Package2,
+        pic: Package2,
         name: "Lorem ipsum",
         description: "One-stop Platform community for Agents and Operator in Thailand.",
     }, {
-        image: Package3,
+        pic: Package3,
         name: "Lorem ipsum",
         description: "One-stop Platform community for Agents and Operator in Thailand.",
     }, {
-        image: Package4,
+        pic: Package4,
         name: "Lorem ipsum",
         description: "One-stop Platform community for Agents and Operator in Thailand.",
     },{
-        image: Package4,
+        pic: Package4,
+        name: "Lorem ipsum",
+        description: "One-stop Platform community for Agents and Operator in Thailand.",
+    },{
+        pic: Package2,
         name: "Lorem ipsum",
         description: "One-stop Platform community for Agents and Operator in Thailand.",
     },
@@ -48,7 +57,7 @@ export default function HomePage() {
                 {packages.map((package: PackageType, index) => (
                     <Package
                         key={`${package.name}-${index}`}
-                        image={package.image}
+                        pic={package.pic}
                         name={package.name}
                         description={package.description}
                     />
