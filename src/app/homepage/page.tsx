@@ -1,3 +1,4 @@
+// import { PackageType } from "@/shared/types"
 import Package from "./Package"
 import Package1 from "@/assets/Package1.jpg"
 import Package2 from "@/assets/Package2.jpg"
@@ -5,7 +6,7 @@ import Package3 from "@/assets/Package3.jpg"
 import Package4 from "@/assets/Package4.jpg"
 
 interface PackageType {
-    pic: string,
+    pic: any,
     name: string,
     description: string
 }
@@ -27,11 +28,11 @@ const packages: Array<PackageType> = [
         pic: Package4,
         name: "Lorem ipsum",
         description: "One-stop Platform community for Agents and Operator in Thailand.",
-    },{
+    }, {
         pic: Package4,
         name: "Lorem ipsum",
         description: "One-stop Platform community for Agents and Operator in Thailand.",
-    },{
+    }, {
         pic: Package2,
         name: "Lorem ipsum",
         description: "One-stop Platform community for Agents and Operator in Thailand.",
@@ -54,12 +55,20 @@ export default function HomePage() {
             </div>
 
             <div className="grid lg:grid-cols-4 justify-center items-center text-center lg:mx-20 mx-7 gap-5">
-                {packages.map((package: PackageType, index) => (
+                {/* {packages.map((package: PackageType, index) => (
                     <Package
                         key={`${package.name}-${index}`}
                         pic={package.pic}
                         name={package.name}
                         description={package.description}
+                    />
+                ))} */}
+                {packages.map((item: PackageType, index) => (
+                    <Package
+                        key={`${item.name}-${index}`}
+                        name={item.name}
+                        description={item.description}
+                        pic={item.pic}
                     />
                 ))}
             </div>
