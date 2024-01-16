@@ -1,4 +1,3 @@
-// import { PackageType } from "@/shared/types"
 import Package from "./Package"
 import Package1 from "@/assets/Package1.jpg"
 import Package2 from "@/assets/Package2.jpg"
@@ -6,7 +5,7 @@ import Package3 from "@/assets/Package3.jpg"
 import Package4 from "@/assets/Package4.jpg"
 
 interface PackageType {
-    pic: any,
+    pic: string | any,
     name: string,
     description: string
 }
@@ -55,14 +54,6 @@ export default function HomePage() {
             </div>
 
             <div className="grid lg:grid-cols-4 justify-center items-center text-center lg:mx-20 mx-7 gap-5">
-                {/* {packages.map((package: PackageType, index) => (
-                    <Package
-                        key={`${package.name}-${index}`}
-                        pic={package.pic}
-                        name={package.name}
-                        description={package.description}
-                    />
-                ))} */}
                 {packages.map((item: PackageType, index) => (
                     <Package
                         key={`${item.name}-${index}`}

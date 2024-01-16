@@ -1,7 +1,7 @@
 import Button from "@/components/Button"
 
 type Props = {
-    pic: any,
+    pic: string | any,
     name: string,
     description: string
 }
