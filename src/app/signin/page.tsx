@@ -1,8 +1,7 @@
 "use client"
 
 import * as React from 'react';
-import { useRouter } from 'next/navigation'
-import { Mail, LockKeyhole, } from 'lucide-react';
+import { Mail, LockKeyhole } from 'lucide-react';
 import { Box, Avatar, Paper, Stack } from '@mui/material';
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 import DeleteIcon from "@mui/icons-material/Delete";
@@ -12,13 +11,11 @@ import ImageDialog from '@/components/image_dialog';
 type Props = {}
 
 export default function Signin({ }: Props) {
-    const router = useRouter()
     const { setData } = useDataStore()
     const refInputFile = React.useRef<HTMLInputElement | null>(null)
 
     const [isHovered, setIsHovered] = React.useState<boolean>(false)
-    const [showPassword, setShowPassword] = React.useState<boolean>(false)
-    const [selectedImage, setSelectedImage] = React.useState<HTMLInputElement | null>(null)
+    const [selectedImage, setSelectedImage] = React.useState<HTMLInputElement | null | any>(null)
     const [openImage, setOpenImage] = React.useState<boolean>(false)
     const [values, setValues] = React.useState({
         email: ""
@@ -38,10 +35,6 @@ export default function Signin({ }: Props) {
 
     const handleCloseImage = () => {
         setOpenImage(false)
-    }
-
-    const handleClickShowPassword = () => {
-        setShowPassword((show) => !show)
     }
 
     const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -184,7 +177,6 @@ export default function Signin({ }: Props) {
                             <div className="relative mt-2 rounded-md">
                                 <div className="absolute pointer-events-none inset-y-0 left-0 flex justify-between items-center pl-3">
                                     <LockKeyhole size={18} className='z-0' />
-                                    {/* <Eye size={18} /> */}
                                 </div>
                                 <input
                                     type="password"
