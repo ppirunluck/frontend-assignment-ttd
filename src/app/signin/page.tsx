@@ -7,10 +7,13 @@ import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { useDataStore } from "../zustand/auth"
 import ImageDialog from '@/components/image_dialog';
+import { useRouter } from "next/navigation"
 
 type Props = {}
 
 export default function Signin({ }: Props) {
+    const router = useRouter()
+
     const { setData } = useDataStore()
     const refInputFile = React.useRef<HTMLInputElement | null>(null)
 
@@ -452,7 +455,10 @@ export default function Signin({ }: Props) {
                     {/*Row4 Close */}
 
                     <div className='flex justify-between pl-20 pr-20 mt-10'>
-                        <button className="rounded-full bg-cencel-button text-white font-semibold px-8 py-2 drop-shadow-3xl w-auto">
+                        <button
+                            className="rounded-full bg-cencel-button text-white font-semibold px-8 py-2 drop-shadow-3xl w-auto"
+                            onClick={() => router.push("/")}
+                        >
                             Cencel
                         </button>
                         <button
