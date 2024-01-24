@@ -14,27 +14,27 @@ const packages: Array<PackageType> = [
     {
         pic: Package1,
         name: "Lorem ipsum",
-        description: "One-stop Platform community for Agents and Operator in Thailand.",
+        description: "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum",
     }, {
         pic: Package2,
         name: "Lorem ipsum",
-        description: "One-stop Platform community for Agents and Operator in Thailand.",
+        description: "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum",
     }, {
         pic: Package3,
         name: "Lorem ipsum",
-        description: "One-stop Platform community for Agents and Operator in Thailand.",
+        description: "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum",
     }, {
         pic: Package4,
         name: "Lorem ipsum",
-        description: "One-stop Platform community for Agents and Operator in Thailand.",
+        description: "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum",
     }, {
         pic: Package4,
         name: "Lorem ipsum",
-        description: "One-stop Platform community for Agents and Operator in Thailand.",
+        description: "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum",
     }, {
         pic: Package2,
         name: "Lorem ipsum",
-        description: "One-stop Platform community for Agents and Operator in Thailand.",
+        description: "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum",
     },
 ]
 
@@ -44,8 +44,9 @@ export default function HomePage() {
             <div className="flex justify-center items-center text-center">
                 <img src={`HomePage.jpg`} alt="homepage" className="h-[500px] md:w-full object-cover" />
                 <div className="absolute">
-                    <p className="md:text-[38px] text-[22px] font-[700] font-Poppins text-white drop-shadow-2xl leading-normal pb-[18px]">Lorem ipsum dolor sit amet consectetur.</p>
-                    <p className="md:text-[26px] text-[15px] font-[500] font-Poppins text-white drop-shadow-2xl leading-normal">One-stop Platform community for Agents and Operator in Thailand.</p>
+                    <p className="md:text-[38px] text-[22px] font-[700] font-Poppins text-white drop-shadow-2xl leading-normal pb-[18px]">Lorem ipsum dolor sit amet consectetur</p>
+                    <p className="md:text-[26px] text-[15px] font-[500] font-Poppins text-white drop-shadow-2xl leading-normal">Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+</p>
                 </div>
             </div>
 
